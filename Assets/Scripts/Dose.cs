@@ -32,6 +32,7 @@ public class Dose : MonoBehaviour
         if (rb.linearVelocity.magnitude < 0.1f && Vector3.Angle(transform.up, Vector3.up) > 45)
         {
             umgekippt = true;
+            DosenManager.Instance.NotifyDosenKipp();
         }
     }
 

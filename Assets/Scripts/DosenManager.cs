@@ -33,7 +33,7 @@ public class DosenManager : MonoBehaviour
 
     public void NotifyDosenKipp()
     {
-        CountDosen();
+        stehendeDosenCount = CountDosen();
     }
 
 }
