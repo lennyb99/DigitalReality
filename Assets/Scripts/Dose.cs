@@ -7,6 +7,15 @@ public class Dose : MonoBehaviour
 
     public bool umgekippt;
 
+    private AudioSource _source;
+
+    public AudioClip soundClip;
+
+    void Awake()
+    {
+        _source = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,6 +42,14 @@ public class Dose : MonoBehaviour
         {
             umgekippt = true;
             DosenManager.Instance.NotifyDosenKipp();
+            PlayObjectSound();
+        }
+    }
+    public void PlayObjectSound()
+    {
+        if (_source != null && !_source.isPlaying)
+        {
+            _source.PlayOneShot(soundClip);
         }
     }
 

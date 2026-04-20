@@ -7,6 +7,9 @@ public class DosenManager : MonoBehaviour
     [SerializeField]
     private List<Dose> dosen;
 
+    [SerializeField]
+    private TafelManager tafelManager;
+
     public static DosenManager Instance;
 
     public int stehendeDosenCount;
@@ -34,6 +37,7 @@ public class DosenManager : MonoBehaviour
     public void NotifyDosenKipp()
     {
         stehendeDosenCount = CountDosen();
+        tafelManager.SetDosenToClear(stehendeDosenCount);
     }
 
 }
