@@ -1,20 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 public class Dose : MonoBehaviour
 {
     private Rigidbody rb;
-
     public bool umgekippt;
 
-    private AudioSource _source;
-
-    public AudioClip soundClip;
-
-    void Awake()
-    {
-        _source = GetComponent<AudioSource>();
-    }
+    [SerializeField] private EventReference tippedSoundEvent;
 
     void Start()
     {
@@ -47,9 +40,9 @@ public class Dose : MonoBehaviour
     }
     public void PlayObjectSound()
     {
-        if (_source != null && !_source.isPlaying)
+        if (!tippedSoundEvent.IsNull)
         {
-            _source.PlayOneShot(soundClip);
+            RuntimeManager.PlayOneShot(tippedSoundEvent, transform.position);
         }
     }
 

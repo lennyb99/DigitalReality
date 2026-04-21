@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{37651910-fc5c-4ec2-b2dc-1cdbfe341802}">
+		<property name="assetPath">
+			<value>Ambience, Birdsong, Songbirds, Eurasian Blue Tit, Blackbird, Robin, Edge Of Mixed Forest, Spring, Evening SND101519 1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>80.090854166666674</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{88529fcd-5120-434d-b60b-38644b75e650}</destination>
+		</relationship>
+	</object>
+</objects>
