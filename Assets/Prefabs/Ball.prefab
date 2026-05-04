@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1924627788116591770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.412}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,6 +99,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4176158614190098358}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4781415679703926392}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1024433047808340173}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4846139874835298726}
   m_SourcePrefab: {fileID: 100100000, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
 --- !u!1 &34779785872210186 stripped
 GameObject:
@@ -113,7 +122,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34779785872210186}
   serializedVersion: 5
-  m_Mass: 0.4
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -129,9 +138,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &1436414151064145099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,10 +188,70 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4846139874835298726}
+        m_TargetAssemblyTypeName: VelocityCalculator, Assembly-CSharp
+        m_MethodName: set_IsGrabbed
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1024433047808340173}
+        m_TargetAssemblyTypeName: BallPhysics, Assembly-CSharp
+        m_MethodName: OnBallGrabbed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024433047808340173}
+        m_TargetAssemblyTypeName: BallPhysics, Assembly-CSharp
+        m_MethodName: TriggerThrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4846139874835298726}
+        m_TargetAssemblyTypeName: VelocityCalculator, Assembly-CSharp
+        m_MethodName: set_IsGrabbed
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1024433047808340173}
+        m_TargetAssemblyTypeName: BallPhysics, Assembly-CSharp
+        m_MethodName: OnBallReleased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -232,7 +301,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -256,7 +325,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
   m_LimitLinearVelocity: 0
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
@@ -282,6 +351,49 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.18713109
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4781415679703926392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34779785872210186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e417263d56f8482468ae7c9c2a208a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ball
+--- !u!114 &1024433047808340173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34779785872210186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec447c9d3be9bc4c8de43f751de47ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallPhysics
+  isFlying: 0
+  dragCoefficient: 0.5
+  airDensity: 1.35
+  crossSectionArea: 0.34
+  speedMultiplier: 3.21
+  gravityScale: 2.38
+--- !u!114 &4846139874835298726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34779785872210186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0deb26a81cfa7ca478c21d99b9355510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VelocityCalculator
+  bufferSize: 10
 --- !u!4 &806215438445224880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}

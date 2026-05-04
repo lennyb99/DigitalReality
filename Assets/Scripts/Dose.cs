@@ -9,16 +9,15 @@ public class Dose : MonoBehaviour
 
     [SerializeField] private EventReference tippedSoundEvent;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (rb == null) Debug.LogError("Dose has no rigid body!");
 
         umgekippt = false;
 
         StartCoroutine(CheckRotation());
     }
-    
 
     IEnumerator CheckRotation()
     {
@@ -34,15 +33,7 @@ public class Dose : MonoBehaviour
         if (rb.linearVelocity.magnitude < 0.1f && Vector3.Angle(transform.up, Vector3.up) > 45)
         {
             umgekippt = true;
-            DosenManager.Instance.NotifyDosenKipp();
-            PlayObjectSound();
-        }
-    }
-    public void PlayObjectSound()
-    {
-        if (!tippedSoundEvent.IsNull)
-        {
-            RuntimeManager.PlayOneShot(tippedSoundEvent, transform.position);
+            if(DosenManager.Instance != null) DosenManager.Instance.NotifyDosenKipp();
         }
     }
 
