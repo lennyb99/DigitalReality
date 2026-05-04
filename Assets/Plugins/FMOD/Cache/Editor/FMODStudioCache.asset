@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 639124023866894208
+  lastModified: 639123604399992866
   FileSizes:
   - Name: Desktop
     Value: 41280
@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639124023866894208
+  lastModified: 639123604399189785
   FileSizes:
   - Name: Desktop
     Value: 1032672
@@ -65,7 +65,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639124023866894208
+  cacheTime: 639123604399992866
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639124023866894208
+  lastModified: 639123604399199778
   FileSizes:
   - Name: Desktop
     Value: 872
