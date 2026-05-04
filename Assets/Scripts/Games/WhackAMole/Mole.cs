@@ -8,19 +8,23 @@ public class Mole : MonoBehaviour
 
 
     [SerializeField]private Animator animator;
-
+    [SerializeField] private StudioEventEmitter hitMoleSound;
+    [SerializeField] private StudioEventEmitter moleInSound;
+    [SerializeField] private StudioEventEmitter moleOutSound;
+    
     private bool _isActive;
     public bool Active
     {
         get { return _isActive; }
         set { 
             _isActive = value; 
-            if (value == true)
-            {
+            if (value == true) {
+                moleInSound.Play();
                 animator.SetBool("Out", true);
             }
             else
             {
+                moleOutSound.Play();
                 animator.SetBool("Out", false);
             }
         }
@@ -36,8 +40,9 @@ public class Mole : MonoBehaviour
         }
     }
 
-    private void IsHit()
-    {
+    private void IsHit() {
+        
+        hitMoleSound.Play();
         animator.SetTrigger("Hit");
         
         Active = false;

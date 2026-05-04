@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{f7a55fb1-a301-4ae9-88a7-e17c65f304e9}</destination>
+			<destination>{5c0af574-9e3e-4bcc-949e-65f87d5313ad}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{6fd53632-c46f-463d-b727-d38f2e7d2bb7}">
@@ -59,7 +60,11 @@
 			<destination>{4da04eb1-99e1-4d37-89f8-12a576ba9817}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{1dbf64e7-8721-4809-9888-a4920c02d305}" />
+	<object class="EventAutomatableProperties" id="{1dbf64e7-8721-4809-9888-a4920c02d305}">
+		<property name="minimumDistance">
+			<value>0.100000001</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ce9348ed-b51c-412d-a716-721764b0847a}" />
 	<object class="Timeline" id="{a35ca0db-2820-42a3-9c51-95951e566db9}">
 		<property name="isProxyEnabled">

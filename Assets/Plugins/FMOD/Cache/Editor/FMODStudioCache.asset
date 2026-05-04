@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8786199763147257380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WhackAMole/MoleOut
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/WhackAMole/MoleOut
+  Guid:
+    Data1: -2122057164
+    Data2: 1232673476
+    Data3: -330123587
+    Data4: -1424271344
+  Banks:
+  - {fileID: -8499558992393243268}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8499558992393243268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,38 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 639123604399992866
+  lastModified: 639135323702055994
   FileSizes:
   - Name: Desktop
-    Value: 41280
+    Value: 86816
   Exists: 1
+--- !u!114 &-8041476146408043140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WhackAMole/MoleHit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/WhackAMole/MoleHit
+  Guid:
+    Data1: -1536746593
+    Data2: 1266075208
+    Data3: 1693805463
+    Data4: -367461709
+  Banks:
+  - {fileID: -8499558992393243268}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0.3
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4777633731812450148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,10 +89,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639123604399189785
+  lastModified: 639135323475422312
   FileSizes:
   - Name: Desktop
-    Value: 1032672
+    Value: 1073376
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -59,18 +113,27 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 7763611097821790822}
   - {fileID: 296296974420517060}
+  - {fileID: 2147516540107825578}
+  - {fileID: -8786199763147257380}
+  - {fileID: -8041476146408043140}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4777633731812450148}
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639123604399992866
+  cacheTime: 639135323702055994
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
   - key: event:/CanImpact
     index: 1
+  - key: event:/WhackAMole/MoleIn
+    index: 2
+  - key: event:/WhackAMole/MoleOut
+    index: 3
+  - key: event:/WhackAMole/MoleHit
+    index: 4
 --- !u!114 &296296974420517060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +152,34 @@ MonoBehaviour:
     Data2: 1339648887
     Data3: 923364014
     Data4: -1886481324
+  Banks:
+  - {fileID: -8499558992393243268}
+  - {fileID: -4777633731812450148}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0.1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2147516540107825578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WhackAMole/MoleIn
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/WhackAMole/MoleIn
+  Guid:
+    Data1: 175826457
+    Data2: 1184131655
+    Data3: -2106799435
+    Data4: 1565545498
   Banks:
   - {fileID: -8499558992393243268}
   IsStream: 0
@@ -113,10 +204,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639123604399199778
+  lastModified: 639135323475432252
   FileSizes:
   - Name: Desktop
-    Value: 872
+    Value: 1000
   Exists: 1
 --- !u!114 &7763611097821790822
 MonoBehaviour:
@@ -140,7 +231,7 @@ MonoBehaviour:
   - {fileID: -4777633731812450148}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

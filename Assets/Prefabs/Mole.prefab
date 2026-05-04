@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4282801436269287541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7904738292730976703}
+  - component: {fileID: 1121425474318661505}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7904738292730976703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282801436269287541}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7198261927926264643}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1121425474318661505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282801436269287541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1536746593
+      Data2: 1266075208
+      Data3: 1693805463
+      Data4: -367461709
+    Path: event:/WhackAMole/MoleHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.3
+  OverrideMaxDistance: 20
 --- !u!1001 &7237254264236414120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,7 +117,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7904738292730976703}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
       insertIndex: -1
@@ -68,7 +134,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3546484903943589006}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6331421482712530172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2348298297488460625}
   m_SourcePrefab: {fileID: 100100000, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
+--- !u!4 &7198261927926264643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
+  m_PrefabInstance: {fileID: 7237254264236414120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7543122252757412345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9bebd8a3fc93d1c4a9b758e437693b5f, type: 3}
@@ -109,6 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mole
   animator: {fileID: 2430696275224893247}
+  hitMoleSound: {fileID: 1121425474318661505}
+  moleInSound: {fileID: 6331421482712530172}
+  moleOutSound: {fileID: 2348298297488460625}
 --- !u!65 &113225853517004112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -157,3 +237,65 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6331421482712530172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543122252757412345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 175826457
+      Data2: 1184131655
+      Data3: -2106799435
+      Data4: 1565545498
+    Path: event:/WhackAMole/MoleIn
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2348298297488460625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543122252757412345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2122057164
+      Data2: 1232673476
+      Data3: -330123587
+      Data4: -1424271344
+    Path: event:/WhackAMole/MoleOut
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

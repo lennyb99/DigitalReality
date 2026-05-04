@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{48db7aa4-39af-4001-b502-54b9bc12ee4b}">
+		<property name="name">
+			<value>WhackAMole</value>
+		</property>
+		<relationship name="folder">
+			<destination>{83c5c2b2-778b-4aaa-8783-513b88585503}</destination>
+		</relationship>
+	</object>
+</objects>
