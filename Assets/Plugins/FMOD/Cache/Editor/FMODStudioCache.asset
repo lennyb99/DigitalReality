@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 639135336160338693
+  lastModified: 639135361759339117
   FileSizes:
   - Name: Desktop
-    Value: 58112
+    Value: 134688
   Exists: 1
 --- !u!114 &-8041476146408043140
 MonoBehaviour:
@@ -89,11 +89,65 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639135336160520962
+  lastModified: 639135361759522921
   FileSizes:
   - Name: Desktop
     Value: 1044736
   Exists: 1
+--- !u!114 &-2541754429768672622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CanGameWin
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/CanGameWin
+  Guid:
+    Data1: -1943942295
+    Data2: 1095013132
+    Data3: 1575624121
+    Data4: -1161254937
+  Banks:
+  - {fileID: -8499558992393243268}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1860551322441588418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ScoreBoardScribble
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ScoreBoardScribble
+  Guid:
+    Data1: 162025011
+    Data2: 1151488540
+    Data3: -1465381244
+    Data4: 645335746
+  Banks:
+  - {fileID: -8499558992393243268}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,13 +170,15 @@ MonoBehaviour:
   - {fileID: 2147516540107825578}
   - {fileID: -8786199763147257380}
   - {fileID: -8041476146408043140}
+  - {fileID: -1860551322441588418}
+  - {fileID: -2541754429768672622}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4777633731812450148}
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639135336160520962
+  cacheTime: 639135361759532772
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
@@ -134,6 +190,10 @@ MonoBehaviour:
     index: 3
   - key: event:/WhackAMole/MoleHit
     index: 4
+  - key: event:/ScoreBoardScribble
+    index: 5
+  - key: event:/CanGameWin
+    index: 6
 --- !u!114 &296296974420517060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,10 +264,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639135336160520962
+  lastModified: 639135361759532772
   FileSizes:
   - Name: Desktop
-    Value: 1000
+    Value: 1098
   Exists: 1
 --- !u!114 &7763611097821790822
 MonoBehaviour:

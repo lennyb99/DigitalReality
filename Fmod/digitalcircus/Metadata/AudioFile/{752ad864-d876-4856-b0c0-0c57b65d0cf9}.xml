@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{1cebfad6-8551-4f3c-af2d-0ae3e196f7c0}">
+	<object class="AudioFile" id="{752ad864-d876-4856-b0c0-0c57b65d0cf9}">
 		<property name="assetPath">
-			<value>Effects/Mole/MoleHit1.wav</value>
+			<value>Effects/ScoreBoard/ScoreBoardScribble (5).wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.5328124999999999</value>
+			<value>0.47660416666666666</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{88529fcd-5120-434d-b60b-38644b75e650}</destination>

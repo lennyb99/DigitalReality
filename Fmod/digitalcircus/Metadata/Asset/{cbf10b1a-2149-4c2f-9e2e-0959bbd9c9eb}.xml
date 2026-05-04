@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="EncodableAsset" id="{84debd51-d6e6-4621-80e4-9c18d70400bd}">
+	<object class="EncodableAsset" id="{cbf10b1a-2149-4c2f-9e2e-0959bbd9c9eb}">
 		<property name="assetPath">
-			<value>Effects/Mole/</value>
+			<value>Effects/ScoreBoard/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{88529fcd-5120-434d-b60b-38644b75e650}</destination>
