@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using FMODUnity;
@@ -8,8 +9,7 @@ public class Dose : MonoBehaviour
     public bool umgekippt;
 
     [SerializeField] private EventReference tippedSoundEvent;
-
-
+    [SerializeField] private StudioEventEmitter canImpactSound;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,6 +17,12 @@ public class Dose : MonoBehaviour
         umgekippt = false;
 
         StartCoroutine(CheckRotation());
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.relativeVelocity.magnitude > 1f) {
+            canImpactSound.Play();
+        }
     }
 
     IEnumerator CheckRotation()
