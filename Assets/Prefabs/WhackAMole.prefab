@@ -38,6 +38,7 @@ Transform:
   - {fileID: 8170752840248601048}
   - {fileID: 5631917873220364915}
   - {fileID: 5940394700709240193}
+  - {fileID: 1093073147332863131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &244149205801551096
@@ -52,17 +53,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b013268007b34394690afcc3c83eeb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WhackAMoleManager
-  gameTime: 500
-  moleTime: 2
-  moleFrequencyInSeconds: 1
+  gameTime: 30
+  moleTime: 1
+  moleFrequencyInSeconds: 0.6
   moles:
   - {fileID: 162336647056346456}
   - {fileID: 638379918299775552}
   - {fileID: 6028274947403469904}
   - {fileID: 3476400431243867652}
   - {fileID: 5810898923009081375}
+  startButton: {fileID: 473331621558303028}
   scoreText: {fileID: 7742381113365000909}
   highscoreText: {fileID: 465180443850294948}
+  playSound: {fileID: 7165296483826840168}
   playActive: 0
 --- !u!1 &1298711613997275127
 GameObject:
@@ -749,6 +752,69 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &6881202433463545086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093073147332863131}
+  - component: {fileID: 7165296483826840168}
+  m_Layer: 0
+  m_Name: Speaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1093073147332863131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881202433463545086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.839, z: 0.204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7650709058669451180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7165296483826840168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881202433463545086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 745268046
+      Data2: 1117110184
+      Data3: -681051509
+      Data4: -1579397162
+    Path: event:/WhackAMole/MachinePlay
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7824804594365325161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1471,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6821887585681450876, guid: 446d474344078844f90bbb282cdf535a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9111780800247815289}
+    - targetCorrespondingSourceObject: {fileID: 6821887585681450876, guid: 446d474344078844f90bbb282cdf535a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 421117984739717578}
     - targetCorrespondingSourceObject: {fileID: -3042495156658115781, guid: 446d474344078844f90bbb282cdf535a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2676096065743772526}
@@ -1415,6 +1487,50 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6818868508399932666}
   m_SourcePrefab: {fileID: 100100000, guid: 446d474344078844f90bbb282cdf535a, type: 3}
+--- !u!1 &473331621558303028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6821887585681450876, guid: 446d474344078844f90bbb282cdf535a, type: 3}
+  m_PrefabInstance: {fileID: 6358425198538104392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &9111780800247815289
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473331621558303028}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &421117984739717578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473331621558303028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7e13ba4a101154a807bab93776a960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionProxy
 --- !u!1 &1007478938723317107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3042495156658115781, guid: 446d474344078844f90bbb282cdf535a, type: 3}

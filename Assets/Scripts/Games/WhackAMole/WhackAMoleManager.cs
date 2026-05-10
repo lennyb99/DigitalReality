@@ -1,20 +1,28 @@
+using FMODUnity;
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class WhackAMoleManager : MonoBehaviour
 {
     [SerializeField] private int gameTime;
-    [SerializeField] private int moleTime;
+    [SerializeField] public float moleMinActiveTime;
+    [SerializeField] public float moleMaxActiveTime;
     [SerializeField] private float moleFrequencyInSeconds;
 
     [SerializeField] private List<Mole> moles;
 
+    [SerializeField] private GameObject startButton;
+
     [Header("Text Visuals")]
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text highscoreText;
+
+    [Header("Sounds")]
+    [SerializeField] private StudioEventEmitter playSound;
 
     public bool playActive;
 
@@ -31,7 +39,6 @@ public class WhackAMoleManager : MonoBehaviour
         get { return _score; }
         set { 
             _score = value;
-            if (value > HighScore) HighScore = value;
             scoreText.text = value.ToString();
         }
     }
@@ -47,20 +54,34 @@ public class WhackAMoleManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (Mole mole in moles)
-        {
-            mole.RegisterManager(this);
-        }
+        SetupEverything();
 
         Score = 0;
         HighScore = 0;
 
-        StartGame();
+    }
+    
+    private void SetupEverything()
+    {
+        SetupMoles();
+        SetupStartButton();
     }
 
-    private void Update()
+    private void SetupMoles()
     {
-          
+        foreach (Mole mole in moles)
+        {
+            mole.RegisterManager(this);
+        }
+    }
+
+    private void SetupStartButton()
+    {
+        var prox = startButton.GetComponent<CollisionProxy>();
+        if (prox != null)
+        {
+            prox.OnCustomTriggerEnter += CheckUpForStart;
+        }
     }
 
     private Mole GetRandomInactiveMole()
@@ -81,9 +102,25 @@ public class WhackAMoleManager : MonoBehaviour
         return tempList[randIndex];
     }
 
-    public void StartGame()
+    public void CheckUpForStart(Collider other)
+    {
+        if (playActive || !other.gameObject.CompareTag("Hammer")) return;
+     
+        StartCoroutine(InitiateStartSequence());
+    }
+
+    IEnumerator InitiateStartSequence()
     {
         playActive = true;
+        playSound.Play();
+
+        yield return new WaitForSeconds(3); // Wait for countdown, music will already be playing
+
+        StartGame();
+    }
+
+    public void StartGame()
+    {
         StartCoroutine(RunGame());
         StartCoroutine(RunTimer());
     }
@@ -115,6 +152,12 @@ public class WhackAMoleManager : MonoBehaviour
             TimerValue -= 1;
             yield return new WaitForSeconds(1);
         }
+        StopGame();
+    }
+
+    private void StopGame()
+    {
+        if (Score > HighScore) HighScore = Score;
         playActive = false;
     }
 
@@ -123,8 +166,4 @@ public class WhackAMoleManager : MonoBehaviour
         Score += 1;
     }
 
-    public float GetMoleTime()
-    {
-        return moleTime;
-    }
 }

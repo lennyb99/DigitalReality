@@ -7,7 +7,7 @@ public class Mole : MonoBehaviour
     private WhackAMoleManager manager;
 
 
-    [SerializeField]private Animator animator;
+    [SerializeField] private Animator animator;
     [SerializeField] private StudioEventEmitter hitMoleSound;
     [SerializeField] private StudioEventEmitter moleInSound;
     [SerializeField] private StudioEventEmitter moleOutSound;
@@ -58,9 +58,9 @@ public class Mole : MonoBehaviour
 
     IEnumerator RunMoleLife()
     {
-        yield return new WaitForSeconds(Random.Range(manager.GetMoleTime()-1, manager.GetMoleTime()+1));
+        yield return new WaitForSeconds(Random.Range(manager.moleMinActiveTime, manager.moleMaxActiveTime));
 
-       // InactivateMole();
+        InactivateMole();
     }
 
     public void InactivateMole()

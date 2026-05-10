@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 639135361759339117
+  lastModified: 639140196719083677
   FileSizes:
   - Name: Desktop
-    Value: 134688
+    Value: 610656
   Exists: 1
 --- !u!114 &-8041476146408043140
 MonoBehaviour:
@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 0.3
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6133317595214590495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WhackAMole/MachinePlay
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/WhackAMole/MachinePlay
+  Guid:
+    Data1: 745268046
+    Data2: 1117110184
+    Data3: -681051509
+    Data4: -1579397162
+  Banks:
+  - {fileID: -8499558992393243268}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34307
 --- !u!114 &-4777633731812450148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +116,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639135361759522921
+  lastModified: 639140196731702000
   FileSizes:
   - Name: Desktop
     Value: 1044736
@@ -172,13 +199,14 @@ MonoBehaviour:
   - {fileID: -8041476146408043140}
   - {fileID: -1860551322441588418}
   - {fileID: -2541754429768672622}
+  - {fileID: -6133317595214590495}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4777633731812450148}
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639135361759532772
+  cacheTime: 639140196731712480
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
@@ -264,10 +292,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639135361759532772
+  lastModified: 639140196731712480
   FileSizes:
   - Name: Desktop
-    Value: 1098
+    Value: 1152
   Exists: 1
 --- !u!114 &7763611097821790822
 MonoBehaviour:
