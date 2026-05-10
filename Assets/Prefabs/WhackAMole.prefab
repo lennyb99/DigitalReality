@@ -54,7 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WhackAMoleManager
   gameTime: 30
-  moleTime: 1
+  moleMinActiveTime: 0
+  moleMaxActiveTime: 0
   moleFrequencyInSeconds: 0.6
   moles:
   - {fileID: 162336647056346456}
@@ -1477,6 +1478,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6821887585681450876, guid: 446d474344078844f90bbb282cdf535a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 421117984739717578}
+    - targetCorrespondingSourceObject: {fileID: 6821887585681450876, guid: 446d474344078844f90bbb282cdf535a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4626022272087037680}
+    - targetCorrespondingSourceObject: {fileID: 6821887585681450876, guid: 446d474344078844f90bbb282cdf535a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5204030975844974323}
     - targetCorrespondingSourceObject: {fileID: -3042495156658115781, guid: 446d474344078844f90bbb282cdf535a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2676096065743772526}
@@ -1531,6 +1538,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7e13ba4a101154a807bab93776a960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionProxy
+--- !u!95 &4626022272087037680
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473331621558303028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07f411e436599f14ca582c2addb49048, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5204030975844974323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473331621558303028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -697144960
+      Data2: 1137843093
+      Data3: 900758170
+      Data4: 1877077209
+    Path: event:/WhackAMole/MachineButtonPress
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1007478938723317107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3042495156658115781, guid: 446d474344078844f90bbb282cdf535a, type: 3}

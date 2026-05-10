@@ -105,14 +105,23 @@ public class WhackAMoleManager : MonoBehaviour
     public void CheckUpForStart(Collider other)
     {
         if (playActive || !other.gameObject.CompareTag("Hammer")) return;
-     
+
+        AnimateButton();
         StartCoroutine(InitiateStartSequence());
+    }
+
+    private void AnimateButton()
+    {
+        startButton.GetComponent<Animator>().SetTrigger("ButtonPressed");
+        startButton.GetComponent<StudioEventEmitter>().Play();
     }
 
     IEnumerator InitiateStartSequence()
     {
         playActive = true;
         playSound.Play();
+
+        Score = 0;
 
         yield return new WaitForSeconds(3); // Wait for countdown, music will already be playing
 
@@ -159,11 +168,21 @@ public class WhackAMoleManager : MonoBehaviour
     {
         if (Score > HighScore) HighScore = Score;
         playActive = false;
+
+        foreach (Mole mole in moles)
+        {
+            mole.InactivateMole();
+        }
+    
     }
 
     public void IncrementCounter()
     {
-        Score += 1;
+        if (playActive)
+        {
+            Score += 1;
+        }
+        
     }
 
 }
