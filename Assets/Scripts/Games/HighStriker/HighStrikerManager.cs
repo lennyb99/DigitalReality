@@ -34,17 +34,17 @@ public class HighStrikerManager : MonoBehaviour
 
         travelWeight.RegisterManager(this);
 
-        StartCoroutine(Testing());
+        //StartCoroutine(Testing());
     }
 
-    public void HandleNewScore()
+    public void HandleNewHeight()
     {
         UpdateHeightLevelPercentage(travelWeight.gameObject.transform.position.y - 0.2765782f);
     }
 
     public void HandlePeak()
     {
-
+        StartCoroutine(PeakHandling());
     }
 
     private void AdjustLamps(float newVal)
@@ -72,11 +72,15 @@ public class HighStrikerManager : MonoBehaviour
 
     private void HitDetect(Collider other)
     {
-        if (other == null || other.CompareTag("Hammer")) return;
+        if (other == null || !other.CompareTag("HammerStriker")) return;
 
-        VelocityCalculator hammerVelo = highStrikerHammer.GetComponent<VelocityCalculator>();
+        VelocityCalculator hammerVelo = other.gameObject.GetComponent<VelocityCalculator>();
+
 
         Vector3 hitVector = hammerVelo.GetBufferedVelocity(5);
+        Debug.Log(hitVector.ToString());
+
+
 
         float hitForce = hitVector.magnitude; // Power of the movement
         float hitAngle = Vector3.Angle(hitVector, Vector3.down); // Calculate angle of incoming hit
@@ -102,11 +106,18 @@ public class HighStrikerManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             Debug.Log("launching");
             LaunchWeight(10);
         }
        
+    }
+
+    IEnumerator PeakHandling()
+    {
+        yield return new WaitForSeconds(2f);
+
+        HandleNewHeight();
     }
 
 }

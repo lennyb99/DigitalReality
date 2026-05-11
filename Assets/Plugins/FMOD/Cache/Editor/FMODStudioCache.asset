@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 639140975316026352
+  lastModified: 639141028707121837
   FileSizes:
   - Name: Desktop
     Value: 669376
@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639140975316274978
+  lastModified: 639140306846022932
   FileSizes:
   - Name: Desktop
     Value: 1044736
@@ -262,7 +262,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639140975316284970
+  cacheTime: 639141028707132035
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
@@ -282,6 +282,8 @@ MonoBehaviour:
     index: 7
   - key: event:/WhackAMole/MachineButtonPress
     index: 8
+  - key: event:/BallHolderNewBall
+    index: 9
 --- !u!114 &296296974420517060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +354,7 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639140975316284970
+  lastModified: 639141028707132035
   FileSizes:
   - Name: Desktop
     Value: 1254

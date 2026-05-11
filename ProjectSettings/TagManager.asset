@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Hammer
+  - HammerStriker
   layers:
   - Default
   - TransparentFX

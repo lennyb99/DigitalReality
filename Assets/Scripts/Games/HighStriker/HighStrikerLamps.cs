@@ -4,7 +4,6 @@ public class HighStrikerLamps : MonoBehaviour
 {
     public void SetValueForLamps(float value)
     {
-        Debug.Log($"Got new input with value: {value}");
         float newValue = 1 - value;
 
         Renderer ren = GetComponent<Renderer>();
