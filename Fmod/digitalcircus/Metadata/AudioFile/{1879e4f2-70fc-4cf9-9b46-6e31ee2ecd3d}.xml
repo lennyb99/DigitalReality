@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1879e4f2-70fc-4cf9-9b46-6e31ee2ecd3d}">
+		<property name="assetPath">
+			<value>Effects/Can/BallHolderNewBall_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0353125000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{88529fcd-5120-434d-b60b-38644b75e650}</destination>
+		</relationship>
+	</object>
+</objects>

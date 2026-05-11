@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 639140313857912097
+  lastModified: 639140975316026352
   FileSizes:
   - Name: Desktop
-    Value: 623232
+    Value: 669376
   Exists: 1
 --- !u!114 &-8041476146408043140
 MonoBehaviour:
@@ -143,11 +143,38 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639140306846022932
+  lastModified: 639140975316274978
   FileSizes:
   - Name: Desktop
     Value: 1044736
   Exists: 1
+--- !u!114 &-3198058351407527017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BallHolderNewBall
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BallHolderNewBall
+  Guid:
+    Data1: -1034871914
+    Data2: 1323557185
+    Data3: 96117434
+    Data4: -189465762
+  Banks:
+  - {fileID: -8499558992393243268}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2541754429768672622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,13 +255,14 @@ MonoBehaviour:
   - {fileID: -2541754429768672622}
   - {fileID: -6133317595214590495}
   - {fileID: -6874444131847177025}
+  - {fileID: -3198058351407527017}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4777633731812450148}
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639140313857912097
+  cacheTime: 639140975316284970
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
@@ -324,10 +352,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639140306846032919
+  lastModified: 639140975316284970
   FileSizes:
   - Name: Desktop
-    Value: 1206
+    Value: 1254
   Exists: 1
 --- !u!114 &7763611097821790822
 MonoBehaviour:

@@ -20,7 +20,10 @@ public class WhackAMoleManager : MonoBehaviour
     [Header("Text Visuals")]
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text highscoreText;
-
+    
+    [SerializeField] private ParticleSystem gameWinPS;
+    [SerializeField] private StudioEventEmitter gameWinSound;
+    
     [Header("Sounds")]
     [SerializeField] private StudioEventEmitter playSound;
 
@@ -166,9 +169,12 @@ public class WhackAMoleManager : MonoBehaviour
 
     private void StopGame()
     {
+        gameWinPS.Play();
+        gameWinSound.Play();
+        
         if (Score > HighScore) HighScore = Score;
         playActive = false;
-
+        
         foreach (Mole mole in moles)
         {
             mole.InactivateMole();
