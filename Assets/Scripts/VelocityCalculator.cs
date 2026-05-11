@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VelocityCalculator : MonoBehaviour
 {
-    [SerializeField] private int bufferSize = 10; 
+    [SerializeField] private int bufferSize = 10;
 
     private Queue<Vector3> velocityHistory = new Queue<Vector3>();
     private Vector3 lastPosition;
@@ -44,7 +44,10 @@ public class VelocityCalculator : MonoBehaviour
 
     public Vector3 GetBufferedVelocity(int recentCount)
     {
-        if (velocityHistory.Count == 0 || recentCount <= 0) return Vector3.zero;
+        if (velocityHistory.Count == 0 || recentCount <= 0)
+        {
+            return Vector3.zero;
+        }
         var recentElements = velocityHistory.TakeLast(recentCount);
         Vector3 sum = Vector3.zero;
         int actualCount = 0;

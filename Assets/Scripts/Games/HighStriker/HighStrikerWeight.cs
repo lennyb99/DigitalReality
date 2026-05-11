@@ -19,7 +19,7 @@ public class HighStrikerWeight : MonoBehaviour
     {
         if (shouldObserveTravel && transform.position.y > 0.27)
         {
-            manager.HandleNewScore();
+            manager.HandleNewHeight();
             if (rb.linearVelocity.y <= 0.01f)
             {
                 manager.HandlePeak();
