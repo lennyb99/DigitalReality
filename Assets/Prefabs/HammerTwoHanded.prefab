@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HammerTwoHanded
       objectReference: {fileID: 0}
+    - target: {fileID: 3108177377173286789, guid: 68bb6d2c3c1f5974bb9ef7531147f783, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -217,6 +221,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3460904315639221660}
   m_SourcePrefab: {fileID: 100100000, guid: 68bb6d2c3c1f5974bb9ef7531147f783, type: 3}
+--- !u!1 &1203017147489753597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3108177377173286789, guid: 68bb6d2c3c1f5974bb9ef7531147f783, type: 3}
+  m_PrefabInstance: {fileID: 4292932527720838776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3986502274293173033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 68bb6d2c3c1f5974bb9ef7531147f783, type: 3}
@@ -278,10 +287,34 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203017147489753597}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203017147489753597}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls: []

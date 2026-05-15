@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: ec382ea9cda9f3c4c9dfa52b9563cd0e, type: 2}
+    - target: {fileID: -2483461056640883575, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
       propertyPath: m_Name
       value: Ball
@@ -194,10 +198,34 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5850739440278610130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5850739440278610130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -421,5 +449,10 @@ MonoBehaviour:
 --- !u!4 &806215438445224880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
+  m_PrefabInstance: {fileID: 917320171814372443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5850739440278610130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2483461056640883575, guid: 9d20f6bcdb6748e479acd0f526c129ec, type: 3}
   m_PrefabInstance: {fileID: 917320171814372443}
   m_PrefabAsset: {fileID: 0}
