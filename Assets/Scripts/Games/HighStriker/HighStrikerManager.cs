@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class HighStrikerManager : MonoBehaviour
     [SerializeField] private AnimationCurve hitAngleToForceMultiplier;
     [SerializeField] private AnimationCurve hitForceToLevelReach;
     [SerializeField] private float forceMultiplier;
+
+    [Header("Sounds")] 
+    [SerializeField] private StudioEventEmitter hitSound;
 
     private float _heightLevelPercentage;
     public float HeightLevelPercentage
@@ -78,7 +82,6 @@ public class HighStrikerManager : MonoBehaviour
 
 
         Vector3 hitVector = hammerVelo.GetBufferedVelocity(5);
-        Debug.Log(hitVector.ToString());
 
 
 
@@ -87,9 +90,15 @@ public class HighStrikerManager : MonoBehaviour
         float hitAngleMultiplier = hitAngleToForceMultiplier.Evaluate(hitAngle); // Apply multiplier in dependence of hitAngle
 
         float hitImpact = hitForce * hitAngleMultiplier; // Calculate end result
-            
-        Debug.Log($"Force of hit: {hitForce}. Angle of hit: {hitAngle} translates to -> {hitAngleMultiplier} multiplier. End result: {hitImpact}");
 
+        //Debug.Log($"Force of hit: {hitForce}. Angle of hit: {hitAngle} translates to -> {hitAngleMultiplier} multiplier. End result: {hitImpact}");
+
+        if (hitAngle < 45)
+        {
+            if (hitSound.IsPlaying()) hitSound.Stop();
+            hitSound.Play();
+        }
+        
 
         LaunchWeight(hitImpact);
     }

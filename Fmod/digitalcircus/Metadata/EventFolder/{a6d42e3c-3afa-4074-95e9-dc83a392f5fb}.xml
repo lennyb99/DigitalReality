@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{a6d42e3c-3afa-4074-95e9-dc83a392f5fb}">
+		<property name="name">
+			<value>HighStriker</value>
+		</property>
+		<relationship name="folder">
+			<destination>{83c5c2b2-778b-4aaa-8783-513b88585503}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{08f19400-ea36-46fc-984c-bcfbd39e0c94}">
+		<property name="assetPath">
+			<value>Effects/HighStiker/Misc/Big Hammer Hit Metal Sound Effect.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.1012244897959187</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{88529fcd-5120-434d-b60b-38644b75e650}</destination>
+		</relationship>
+	</object>
+</objects>
