@@ -10,6 +10,7 @@ public class HighStrikerManager : MonoBehaviour
     [SerializeField] private GameObject highStrikerHammer;
     [SerializeField] private HighStrikerWeight travelWeight;
     [SerializeField] private HighStrikerLamps lamps;
+    [SerializeField] private GameObject highscoreBlock;
 
     [Header("Physics")]
     [SerializeField] private AnimationCurve hitAngleToForceMultiplier;
@@ -19,6 +20,16 @@ public class HighStrikerManager : MonoBehaviour
     [Header("Sounds")] 
     [SerializeField] private StudioEventEmitter hitSound;
 
+    private float _highestLevelPercentage = 0;
+    public float HighestLevelPercentage
+    {
+        get { return _highestLevelPercentage; }
+        set {   
+            _highestLevelPercentage = value;
+            UpdateHighscoreBlockPosition();
+        }
+    }
+
     private float _heightLevelPercentage;
     public float HeightLevelPercentage
     {
@@ -26,6 +37,8 @@ public class HighStrikerManager : MonoBehaviour
         set {   
             _heightLevelPercentage = value;
             AdjustLamps(value);
+
+            if (_highestLevelPercentage < value) HighestLevelPercentage = value;
         }
     }
 
@@ -109,7 +122,12 @@ public class HighStrikerManager : MonoBehaviour
         travelWeight.shouldObserveTravel = true;
     }
 
-
+    private void UpdateHighscoreBlockPosition()
+    {
+        Vector3 newPos = highscoreBlock.transform.position;
+        newPos.y = 0.2765782f + HighestLevelPercentage * 2.39f;
+        highscoreBlock.transform.position = newPos;
+    }
 
     IEnumerator Testing()
     {
