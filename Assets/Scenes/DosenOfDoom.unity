@@ -1,4 +1,4 @@
-  %YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
 OcclusionCullingSettings:
@@ -3209,10 +3209,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8854598201327471979, guid: 783e1debbff4d74498047762dcd01180, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3224,6 +3220,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1709286050}
   m_SourcePrefab: {fileID: 100100000, guid: 783e1debbff4d74498047762dcd01180, type: 3}
+--- !u!4 &896814750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3956134142159643652, guid: 783e1debbff4d74498047762dcd01180, type: 3}
+  m_PrefabInstance: {fileID: 896814749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &904092121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5148817236446094103, guid: ad58d6d62128c5b4da1676a62e02f174, type: 3}
@@ -3946,17 +3947,6 @@ Transform:
   - {fileID: 359279762}
   m_Father: {fileID: 814246951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1213180906 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7851300083258310812, guid: 783e1debbff4d74498047762dcd01180, type: 3}
-  m_PrefabInstance: {fileID: 896814749}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b29b6c6428c984a8a73ffc2d58063b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1244565770
 PrefabInstance:
   m_ObjectHideFlags: 0
