@@ -61,8 +61,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: Balls
+  - m_ConditionMode: 1
+    m_ConditionEvent: 2Out
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1287530624110984851}
@@ -87,10 +87,22 @@ AnimatorController:
   m_Name: BallHolder 1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Balls
-    m_Type: 3
+  - m_Name: 1Out
+    m_Type: 9
     m_DefaultFloat: 0
-    m_DefaultInt: 3
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: 2Out
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: 3Out
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
@@ -165,8 +177,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: Balls
+  - m_ConditionMode: 1
+    m_ConditionEvent: 1Out
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7191627669893637330}
@@ -250,8 +262,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: Balls
+  - m_ConditionMode: 1
+    m_ConditionEvent: 3Out
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7177205467174983699}
