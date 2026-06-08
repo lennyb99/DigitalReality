@@ -2568,6 +2568,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1203316440}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &791753946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4472908533761530891, guid: 783e1debbff4d74498047762dcd01180, type: 3}
+  m_PrefabInstance: {fileID: 896814749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &791753949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791753946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5399c422f263d42a233aea529aa6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  uiCanvas: {fileID: 1709286045}
+  menuButtonAction: {fileID: -60998027439631388, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &792070693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3213,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4472908533761530891, guid: 783e1debbff4d74498047762dcd01180, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 791753949}
     - targetCorrespondingSourceObject: {fileID: 5769668477972767437, guid: 783e1debbff4d74498047762dcd01180, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1709286050}
