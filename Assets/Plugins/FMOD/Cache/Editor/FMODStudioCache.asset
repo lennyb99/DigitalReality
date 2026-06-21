@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 0.3
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6875203893846491485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/radiomusic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/radiomusic
+  Guid:
+    Data1: -2098012362
+    Data2: 1092022964
+    Data3: 1285062836
+    Data4: 1538125921
+  Banks:
+  - {fileID: -4777633731812450148}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 157622
 --- !u!114 &-6874444131847177025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,10 +197,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639144564879634626
+  lastModified: 639176539986120493
   FileSizes:
   - Name: Desktop
-    Value: 1044736
+    Value: 2404960
   Exists: 1
 --- !u!114 &-3198058351407527017
 MonoBehaviour:
@@ -341,13 +368,14 @@ MonoBehaviour:
   - {fileID: 2232236241106040644}
   - {fileID: -534092276959476455}
   - {fileID: -5164146546514925909}
+  - {fileID: -6875203893846491485}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4777633731812450148}
   StringsBanks:
   - {fileID: 6954682731834360249}
   cacheVersion: 131859
-  cacheTime: 639144564879644619
+  cacheTime: 639176539986125490
   SerializableEventsDict:
   - key: event:/Ambience
     index: 0
@@ -377,6 +405,8 @@ MonoBehaviour:
     index: 12
   - key: event:/HighStriker/HammerHit
     index: 13
+  - key: event:/radiomusic
+    index: 14
 --- !u!114 &296296974420517060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,10 +504,10 @@ MonoBehaviour:
   Path: Fmod/digitalcircus/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639144564879644619
+  lastModified: 639176539986125490
   FileSizes:
   - Name: Desktop
-    Value: 1434
+    Value: 1476
   Exists: 1
 --- !u!114 &7763611097821790822
 MonoBehaviour:
